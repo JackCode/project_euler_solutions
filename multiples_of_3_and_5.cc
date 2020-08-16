@@ -2,6 +2,20 @@
 //    we get 3, 5, 6 and 9. The sum of these multiples is 23.
 // Find the sum of all the multiples of 3 or 5 below 1000.
 
+#include <iostream>
+
 int sumMultiplesThreeFive () {
-  
+  int sum = 0;
+
+  for (int i = 0; i < 1000; i++)
+    sum += ((i%3==0) || (i%5==0)) ? i : 0;
+
+  return sum;
+}
+
+int main() {
+
+  std::cout << sumMultiplesThreeFive() << std::endl;
+
+  return 0;
 }
